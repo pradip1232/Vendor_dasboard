@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    section .container23 {
+      position: relative;
+      width: 800px;
+      height: 500px;
+      background: #fff;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    section .container23 .user {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+
+    section .container23 .user .imgBx {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background-image: url("https://www.leadsguru.in/assets/img/login.webp");
+      transition: 0.5s;
+    }
+
+    section .container23 .user .imgBx img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section .container23 .user .formBx {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      transition: 0.5s;
+    }
+
+    section .container23 .user .formBx form h2 {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    section .container23 .user .formBx form input {
+      width: 100%;
+      padding: 10px;
+      background: #f5f5f5;
+      color: #333;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      margin: 8px 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    section .container23 .user .formBx form input[type='submit'] {
+      max-width: 100px;
+      background: #677eff;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: 0.5s;
+    }
+
+    section .container23 .user .formBx form .signup {
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #555;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    section .container23 .user .formBx form .signup a {
+      font-weight: 600;
+      text-decoration: none;
+      color: #677eff;
+    }
+
+    section .container23 .signupBx {
+      pointer-events: none;
+    }
+
+    section .container23.active .signupBx {
+      pointer-events: initial;
+    }
+
+    section .container23 .signupBx .formBx {
+      left: 100%;
+    }
+
+    section .container23.active .signupBx .formBx {
+      left: 0;
+    }
+
+    section .container23 .signupBx .imgBx {
+      left: -100%;
+    }
+
+    section .container23.active .signupBx .imgBx {
+      left: 0%;
+    }
+
+    section .container23 .signinBx .formBx {
+      left: 0%;
+    }
+
+    section .container23.active .signinBx .formBx {
+      left: 100%;
+    }
+
+    section .container23 .signinBx .imgBx {
+      left: 0%;
+    }
+
+    section .container23.active .signinBx .imgBx {
+      left: -100%;
+    }
+
+    @media (max-width: 991px) {
+      section .container23 {
+        max-width: 600px;
+      }
+
+      section .container23 {
+        position: relative;
+        width: 800px;
+        height: 647px;
+        background: #fff;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      section .container23 .imgBx {
+        display: none;
+      }
+
+      section .container23 .user .formBx {
+        width: 100%;
+      }
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+  </style>
+</head>
+
+<body>
+
+  <div class="main-header"></div>
+
+  <div class="accountForm">
+    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+    <section>
+      <div class="container23">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img
+              src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg"
+              alt="" />
+          </div>
+          <div class="formBx">
+            <form action="config/vendor-login.php" method="post">
+              <h2 class="mb-3">Sign In</h2>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Username" required />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required />
+              </div>
+              <button type="submit" name="login" class="btn btn-primary">Login</button>
+              <p class="signup mt-3">
+                Don't have an account? <a href="#" onclick="toggleForm();">Sign Up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+
+          <div class="formBx">
+            <form action="/config/vendor-data.php" method="POST">
+              <h2 class="mb-3">Sign Up</h2>
+              <!-- Add your form fields with appropriate Bootstrap styling -->
+              <!-- Example:
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" name="username" placeholder="First Name" required>
+              </div>
+              -->
+              <!-- Repeat for other form fields -->
+              <form action="/config/vendor-data.php" method="POST">
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" name="username" placeholder="First Name"
+                      value="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="gender">Gender</label>
+                    <select class="custom-select form-control" id="gender" name="gender" required>
+                      <option value="">Choose...</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a gender.
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="phonenumber">Mobile Number</label>
+                    <input type="text" class="form-control" id="phonenumber" placeholder="Mobile Number " name="phone"
+                      value="" required>
+                    <div class="invalid-feedback">
+                      Valid mobile number is required.
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email.." required>
+                    <div class="invalid-feedback">
+                      Your email is required.
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                      value="" required>
+                    <div class="invalid-feedback">
+                      Valid password is required.
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p class="signup mt-3">
+                  Already have an account? <a href="#" onclick="toggleForm();">Sign In.</a>
+                </p>
+              </form>
+
+
+          </div>
+          <div class="imgBx">
+            <img
+              src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS and other scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    const toggleForm = () => {
+      const container = document.querySelector('.container23');
+      container.classList.toggle('active');
+    };
+  </script>
+</body>
+
+</html>

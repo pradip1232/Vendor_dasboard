@@ -1,0 +1,36 @@
+.my-account {
+    background-color: aqua;
+
+}
+
+
+
+.pink-color {
+    background-color: #B65271 !important;
+    border: none;
+    color: white;
+}
+
+.pink-color:hover {
+    background-color: #B65271;
+    border: none;
+}
+
+#headingTwo,
+.collapse {
+    background-color: #f1f1f1;
+}
+
+
+.nam-color a {
+    color: black;
+}
+
+.nav-item.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+
+
